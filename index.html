@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Landing Page</title>
+</head>
+
+<body>
+    <nav class="nav">
+        <div class="logo">yumzy<sup>X</sup></div>
+        <div class="nav-link"><i class="fa fa-bars"></i></div>
+    </nav>
+    <div class="hero">
+        <div class="hero-header">
+            <br>
+            <br>
+            <h2 class="header_text">Empower Your Brand And</h2>
+            <br>
+            <h2 class="animate">j</h2>
+        </div>
+        <div class="hero-button">
+            <button>Get Started-For Free</button>
+            <button>Request Live Demo</button>
+        </div>
+        <div class="hero-image">
+            <img src="Landing-page.svg" alt="landing image" height="400">
+        </div>
+    </div>
+
+    <script>
+        const text = ['Increase Loyal Coustomers.', 'Use Strategic Market.', 'Stop Paying Commisions'];
+        let count = 0;
+        let index = 0;
+        let currentText = '';
+        let letter = '';
+        (function type() {
+            if (count === text.length) {
+                count = 0;
+            }
+            currentText = text[count];
+            letter = currentText.slice(0, ++index);
+            document.querySelector('.animate').textContent = letter;
+            if (letter.length === currentText.length) {
+                count++;
+                index = 0;
+            }
+            setTimeout(type, 200);
+        }
+            ());
+    </script>
+
+</body>
+
+</html>
